@@ -28,7 +28,7 @@ public interface UsuarioClient {
                         @RequestHeader("Authorization") String token);
 
     @PutMapping
-    UsuarioDTOResponse atualizaDadosUsuario(@RequestBody UsuarioDTORequest dto,
+    UsuarioDTOResponse atualizarDadosUsuario(@RequestBody UsuarioDTORequest dto,
                                            @RequestHeader("Authorization") String token);
 
     @PutMapping("/endereco")
@@ -42,11 +42,11 @@ public interface UsuarioClient {
                                           @RequestHeader("Authorization") String token);
 
     @PostMapping("/endereco")
-    EnderecoDTOResponse cadastraEndereco(@RequestBody EnderecoDTORequest dto,
+    EnderecoDTOResponse cadastrarEndereco(@RequestBody EnderecoDTORequest dto,
                                         @RequestHeader("Authorization") String token);
 
     @PostMapping("/telefone")
-    TelefoneDTOResponse cadastraTelefone(@RequestBody TelefoneDTORequest dto,
+    TelefoneDTOResponse cadastrarTelefone(@RequestBody TelefoneDTORequest dto,
                                         @RequestHeader("Authorization") String token);
 
 }

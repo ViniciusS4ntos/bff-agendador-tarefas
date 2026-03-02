@@ -36,7 +36,7 @@ public class UsuarioService {
     }
 
     public UsuarioDTOResponse atualizarDadosUsuario(String token, UsuarioDTORequest dto){
-        return client.atualizaDadosUsuario(dto, token);
+        return client.atualizarDadosUsuario(dto, token);
     }
 
     public EnderecoDTOResponse atualizarEndereco(Long id, EnderecoDTORequest enderecoDTO, String token){
@@ -48,11 +48,11 @@ public class UsuarioService {
     }
 
     public EnderecoDTOResponse cadastraEndereco(String token, EnderecoDTORequest dto){
-        return client.cadastraEndereco(dto,token);
+        return client.cadastrarEndereco(dto,token);
     }
 
     public TelefoneDTOResponse cadastraTelefone(String token, TelefoneDTORequest dto){
-        return client.cadastraTelefone(dto,token);
+        return client.cadastrarTelefone(dto,token);
     }
 
 
