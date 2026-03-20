@@ -1,6 +1,7 @@
 package com.vinicius.bffagendadortarefas.controller;
 
 import com.vinicius.bffagendadortarefas.infrastructure.exception.ConflictException;
+import com.vinicius.bffagendadortarefas.infrastructure.exception.InvalidCepException;
 import com.vinicius.bffagendadortarefas.infrastructure.exception.ResourceNotFoundException;
 import com.vinicius.bffagendadortarefas.infrastructure.exception.UnauthorizedException;
 
@@ -26,6 +27,11 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(UnauthorizedException.class)
     public ResponseEntity<String> handleUnauthorizedException(UnauthorizedException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
+    }
+
+    @ExceptionHandler(InvalidCepException.class)
+    public ResponseEntity<String> handleInvalidCepException(InvalidCepException ex){
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
 

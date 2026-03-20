@@ -9,6 +9,7 @@ import com.vinicius.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.vinicius.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
 import com.vinicius.bffagendadortarefas.business.dto.out.TelefoneDTOResponse;
 import com.vinicius.bffagendadortarefas.business.dto.out.UsuarioDTOResponse;
+import com.vinicius.bffagendadortarefas.business.dto.out.ViaCepDTOResponse;
 import com.vinicius.bffagendadortarefas.infrastructure.client.UsuarioClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -53,6 +54,10 @@ public class UsuarioService {
 
     public TelefoneDTOResponse cadastraTelefone(String token, TelefoneDTORequest dto){
         return client.cadastrarTelefone(dto,token);
+    }
+
+    public ViaCepDTOResponse buscarDadosCep(String cep){
+        return client.buscarDadosCep(cep);
     }
 
 
