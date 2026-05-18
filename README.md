@@ -66,7 +66,15 @@ A aplicação possui autenticação utilizando **JWT**, comunicação entre serv
 - Java 17 instalado  
 - Docker instalado  
 - PostgreSQL configurado  
-- Microsserviços ativos  
+- Os seguintes microsserviços ativos e rodando:
+
+| Microsserviço | Repositório |
+|---|---|
+| User-api | https://github.com/ViniciusS4ntos/user-api |
+| agendador-tarefas-api | https://github.com/ViniciusS4ntos/agendador-tarefas-api |
+| notificacao-api | https://github.com/ViniciusS4ntos/notificacao-api |
+
+> ⚠️ O BFF não funciona de forma isolada. Todos os microsserviços acima precisam estar em execução antes de iniciar esta aplicação.
 
 ---
 
@@ -201,7 +209,6 @@ Directory structure:
     └── .mvn/
         └── wrapper/
             └── maven-wrapper.properties
-
 ```
 
 ---
